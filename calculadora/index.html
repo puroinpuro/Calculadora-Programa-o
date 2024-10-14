@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="calculadora">
+        <input id="display" readonly>
+        <div id="keys">
+            <button onclick="AdicionaAoDisplay('+')" class="operador">+</button>
+            <button onclick="AdicionaAoDisplay('7')">7</button>
+            <button onclick="AdicionaAoDisplay('8')">8</button>
+            <button onclick="AdicionaAoDisplay('9')">9</button>
+            <button onclick="AdicionaAoDisplay('-')" class="operador">-</button>
+            <button onclick="AdicionaAoDisplay('4')">4</button>
+            <button onclick="AdicionaAoDisplay('5')">5</button>
+            <button onclick="AdicionaAoDisplay('6')">6</button>
+            <!-- Alterei o '*' para '×' -->
+            <button onclick="AdicionaAoDisplay('×')" class="operador">×</button>
+            <button onclick="AdicionaAoDisplay('1')">1</button>
+            <button onclick="AdicionaAoDisplay('2')">2</button>
+            <button onclick="AdicionaAoDisplay('3')">3</button>
+            <!-- Alterei o '/' para '÷' -->
+            <button onclick="AdicionaAoDisplay('÷')" class="operador">÷</button>
+            <button onclick="AdicionaAoDisplay('0')">0</button>
+            <button onclick="AdicionaAoDisplay('.')">.</button>
+            <button onclick="calcular()">=</button>
+            <button onclick="LimparDisplay()" class="operador">C</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

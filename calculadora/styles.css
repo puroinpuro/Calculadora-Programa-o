@@ -1,0 +1,123 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(210, 36%, 96%);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 16px;
+}
+
+#calculadora {
+    background-color: hsl(210, 36%, 25%);
+    border-radius: 20px;
+    max-width: 400px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+
+/* Display */
+#display {
+    width: 100%;
+    padding: 25px;
+    font-size: 2.5rem;
+    text-align: right;
+    border: none;
+    background-color: hsl(210, 36%, 30%);
+    color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout dos botões */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: hsl(210, 22%, 45%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Botões - efeitos ao interagir */
+button:hover {
+    background-color: hsl(210, 22%, 50%);
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    background-color: hsl(210, 22%, 60%);
+    transform: translateY(1px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botões de operadores */
+.operator-btn {
+    background-color: hsl(39, 100%, 55%);
+}
+
+.operator-btn:hover {
+    background-color: hsl(39, 100%, 65%);
+}
+
+.operator-btn:active {
+    background-color: hsl(39, 100%, 75%);
+}
+
+/* Botão de destaque (ex: igual) */
+#equals-btn {
+    background-color: hsl(120, 100%, 40%);
+    color: white;
+    grid-column: span 2;
+    font-size: 2.5rem;
+}
+
+#equals-btn:hover {
+    background-color: hsl(120, 100%, 50%);
+}
+
+#equals-btn:active {
+    background-color: hsl(120, 100%, 60%);
+}
+
+/* Melhorando a responsividade */
+@media (max-width: 600px) {
+    #calculadora {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    #display {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    #equals-btn {
+        font-size: 2rem;
+    }
+}
